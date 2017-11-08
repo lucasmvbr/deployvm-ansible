@@ -1,0 +1,7 @@
+    - name: registra dns
+      nsupdate:
+        server: "{{ dns_server }}"
+        zone: "{{ dom }}"
+        record: "{{ inventory_hostname }}"
+        value: "{{ ip }}"
+        type: "A"
